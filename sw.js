@@ -1,5 +1,5 @@
 // Service worker de Karting League. VERSION la reescribe scripts/generate_app.py.
-const VERSION = 'kl-9d9f98db9f';
+const VERSION = 'kl-1551f168e8';
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(['./', './index.html', './manifest.webmanifest', './img/logo.webp'])).then(() => self.skipWaiting()));
