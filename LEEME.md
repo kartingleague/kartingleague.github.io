@@ -22,6 +22,16 @@ No duplica lógica: usa `penalties.py` (penalizaciones de posición),
 `generators/build_carnet.py` (carnet, regla v1.1). Si algún total no cuadra
 con `data/standings.json`, lo avisa por consola.
 
+## Trazados de los circuitos
+
+Salen de los planos de `assets/circuits/*.png`: `scripts/centerline.py` saca
+la línea central de la pista (los SVG de `assets/tracks/` son el contorno del
+asfalto y no sirven para esto). La meta y el sentido de marcha de cada
+circuito están en `data/circuitos.json` (`meta` = punto [x, y] en píxeles del
+plano, `sentido` = `horario` / `antihorario`); el nombre tiene que coincidir
+con el `circuit` de `data/rounds.json`. Circuito nuevo: su plano a
+`assets/circuits/`, una entrada en `circuitos.json` y regenerar.
+
 ## Qué enseña
 
 - **Inicio**: próxima ronda con su trazado y cuenta atrás, progreso de la
